@@ -1,0 +1,79 @@
+html{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+body{
+    background-color: #FAFAF9;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.firts-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+}
+
+.firts-content article{
+    margin-left: 28px;
+}
+
+.firts-content .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;  
+    background-color: #F5C044;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+}
+
+.text-content{
+    margin-top: -7px;
+}
+
+.text-content h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #18181B;
+}
+
+.text-content p{
+    margin-top: -20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #52525A;
+    text-wrap: wrap;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.list p{
+    margin-left: 10px;
+    color: #52525A;
+    font-size: 0.8rem;
+}
+
+/*TODO:segunda parte por hacer*/
