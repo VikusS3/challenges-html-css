@@ -7,6 +7,7 @@ html{
 
 body{
     background-color: #FAFAF9;
+
 }
 
 section{
@@ -143,4 +144,31 @@ footer{
    font-weight: 400;
    line-height: 1.8;
    margin-top: 5px;
+}
+
+@media  screen and (max-width: 640px){
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firts-content{
+        width: 500px;
+    }
+
+    .firts-content article{
+        margin-left: -40px;
+    }
+
+    .second-content{
+        margin-top: 40px;
+    }
+    
+    .cards:first-child{
+        margin-left: 70px;
+    }
+
+    .cards:nth-child(2){
+        margin-right: 20px;
+    }
 }
