@@ -9,6 +9,7 @@ body{
     background-image: url('assets/bg-image.svg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 
@@ -157,4 +158,26 @@ button{
     font-size: 16px;
     font-weight: 600;
     color: #4036A9;
+}
+
+@media screen and (max-width:1024px){
+    .form{
+        width: 100%;
+    }
+
+    .formulario{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:640px){
+
+    .formulario{
+        height: 90%;
+    }
+
+    .inputs{
+        display: flex;
+        flex-direction: column;
+    }
 }
