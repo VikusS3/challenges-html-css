@@ -1,73 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Simple HomePage</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <img src="assets/alarado-icon-homepage.svg" alt="Logo de Alardo" >
+      <img src="assets/alarado-icon-homepage.svg" alt="Logo de Alardo" />
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="#" class="active">About Us</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Resource</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-
-        <div class="dark-light-theme">
-            <button>
-                <img src="assets/Moon_fill_light.svg" alt="Dark Mode">
-            </button>
-            <button>
-                <img src="assets/Sun_fill.svg" alt="Light Mode">
-            </button>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#" class="active">About Us</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Resource</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="mobile-navbar">
+        <div class="nav-button">
+          <button>
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
         </div>
+        <div class="content-mobile-navbar">
+          <ul>
+            <li><a href="#" class="active">About us</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Resource</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="dark-light-theme">
+            <button id="dark-mode-btn">
+              <img src="assets/Moon_fill_light.svg" alt="Dark Mode" />
+              <img class="dark-moon" src="assets/Moon_fill.svg" alt="Luna Negra">
+            </button>
+            <button id="light-mode-btn">
+              <img src="assets/Sun_fill.svg" alt="Light Mode" />
+              <img class="dark-sun" src="assets/Sun_fill_light.svg" alt="Sol Claro">
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="dark-light-theme">
+        <button id="dark-mode-btn">
+          <img src="assets/Moon_fill_light.svg" alt="Dark Mode" />
+          <img class="dark-moon" src="assets/Moon_fill.svg" alt="Luna Negra">
+        </button>
+        <button id="light-mode-btn">
+          <img src="assets/Sun_fill.svg" alt="Light Mode" />
+          <img class="dark-sun" src="assets/Sun_fill_light.svg" alt="Sol Claro">
+        </button>
+      </div>
+
+      <div class="nav-button">
+        <button>
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </div>
     </header>
 
-
     <section class="home">
-        <div class="first-content">
-            <h2>
-                😎  Simple way to communicate
-            </h2>
-            <h1>
-                Actions for Accessibility in Design
-            </h1>
-            <p>
-                The fastest way to build and deploy websites with resusable components.
-            </p>
-            <div class="buttons">
-                <button>
-                    Get Started
-                </button>
-                <a href="">
-                    Get live demo
-                </a>
-            </div>
+      <div class="first-content">
+        <h2>😎 Simple way to communicate</h2>
+        <h1>Actions for Accessibility in Design</h1>
+        <p>
+          The fastest way to build and deploy websites with resusable
+          components.
+        </p>
+        <div class="buttons">
+          <button>Get Started</button>
+          <a href=""> Get live demo </a>
+        </div>
 
-            <div class="footer-first-content">
-                <div class="promo">
-                    <img src="assets/Done_ring_round_fill.svg" alt="check" >
-                    <h2>
-                        No credit card required
-                    </h2>
-                </div>
-                <div class="promo">
-                    <img src="assets/Done_ring_round_fill.svg" alt="check" >
-                    <h2>
-                        No software to install
-                    </h2>
-                </div>
-            </div>
+        <div class="footer-first-content">
+          <div class="promo">
+            <img src="assets/Done_ring_round_fill.svg" alt="check" />
+            <h2>No credit card required</h2>
+          </div>
+          <div class="promo">
+            <img src="assets/Done_ring_round_fill.svg" alt="check" />
+            <h2>No software to install</h2>
+          </div>
         </div>
-        <div class="second-content">
-            <img src="assets/hero-image-simple-homepage.webp" alt="">
-        </div>
+      </div>
+      <div class="second-content">
+        <img src="assets/hero-image-simple-homepage.webp" alt="" />
+      </div>
     </section>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
