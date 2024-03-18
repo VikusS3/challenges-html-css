@@ -4,8 +4,19 @@ const darkModeBtnMobile = document.getElementById("dark-mode-btn-mobile");
 const lightModeBtnMobile = document.getElementById("light-mode-btn-mobile");
 const body = document.body;
 
+//guardar el tema en el local storage que sea modo claro primero
+localStorage.setItem('theme', 'light');
+body.classList.add('light-theme');
+
+console.log(localStorage.getItem('theme'));
+
 // Funciones para aplicar el tema oscuro
-function applyDarkMode() {
+
+// Funciones para aplicar el tema claro
+function applyLightMode() {
+ 
+
+
   body.classList.add("dark-theme");
   body.classList.remove("light-theme");
   darkModeBtn.style.backgroundColor = "#f0f0f0";
@@ -23,8 +34,7 @@ function applyDarkMode() {
   document.querySelector('#light-mode-btn-mobile .dark-sun').style.display = 'inline-block';
 }
 
-// Funciones para aplicar el tema claro
-function applyLightMode() {
+function applyDarkMode() {
   body.classList.remove("dark-theme");
   body.classList.add("light-theme");
   darkModeBtn.style.backgroundColor = "transparent";
