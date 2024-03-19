@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --bg-color: #121826;
+  --form-color: #212936;
+  --form-second-color: #394150;
+  --text-primary: #e5e7eb;
+  --text-secondary: #a1a1a9;
+  --text-third: #4d5562;
+  --button-color: #845eee;
+  --min-button-color: #652cd1;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* posicionar la imagen en la parte superior izquierda */
+.color-one img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.color-two img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: -300px;
+  left: -600px;
+  z-index: -1;
+}
+
+.section-form {
+  background-color: var(--form-color);
+  border-radius: 10px;
+  padding: 40px;
+  border: 1.5px solid var(--form-second-color);
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 400px;
+}
+
+.primero{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.primero h1{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.primero label{
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.label-name{
+    margin-top: 25px;
+}
+
+.primero input{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--form-color);
+    border-radius: 10px;
+    border: 2px solid var(--text-third);
+}
+
+
+.primero .label-email{
+    margin-top: 15px;
+}
+
+
+button{
+    padding: 15px 30px;
+    border-radius: 30px;
+    width:35%;
+    margin: auto;
+    margin-top: 25px;
+    border: none;
+    background: linear-gradient(to bottom, var(--button-color) 0%, var(--min-button-color) 100%);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.steps{
+    margin-top: 15px;
+    margin-left: -90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-third);
+    font-size: 0.8rem;
+}
+
+.step-1{
+   display: block;
+}
+
+.step-2{
+    display: none;
+}
+
+.step-3{
+    display: none;
+}
+
+
+.bolitas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.bolita-style{
+    border-radius: 50%;
+    background-color: var(--min-button-color);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.8rem;
+    width: 21px;
+    height: 21px;
+   border: 5px solid var(--form-second-color);
+}
+
+.bolita-style-pass{
+    border-radius: 50%;
+    background-color: var(--min-button-color);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.8rem;
+    width: 15px;
+    height: 15px;
+}
+
+
+.bolita-sin-style{
+    border-radius: 50%;
+    background-color: var(--form-second-color);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.8rem;
+    width: 15px;
+    height: 15px;
+}
+
+
+/** =======================================================*/
+
+.segundo {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.segundo h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.pills{
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pill{
+    padding: 15px 15px;
+    background-color: var(--form-second-color);
+    color: var(--text-secondary);
+    border-radius: 13px;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--text-third);
+    font-size: 0.9rem;
+}
+
+/*poner el boton en el centro*/
+.segundo button{
+    margin-top: 40px;
+    margin-left: 135px;
+}
+
+.pill-select{
+    background-color: var(--min-button-color);
+    color: var(--text-primary);
+    border: 1px solid var(--text-secondary);
+}
+
+
+/** =======================================================*/
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultado h1{
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.data{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.data label{
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.data span{
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.topics{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.topics h2{
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.topic{
+    margin-left: 9px;
+    color: var(--text-primary);
+}
+
+.resultado button{
+    margin-top: 50px;
+    margin-left: 150px;
+}

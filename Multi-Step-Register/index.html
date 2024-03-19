@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="color-one">
+      <img src="assets/blur-radial.svg" alt="nubesita morada" />
+    </div>
+    <section class="section-form">
+      <form action="" class="primero">
+        <h1>Register</h1>
+        <label for="nombre" class="label-name">Name</label>
+        <input
+          type="text"
+          required
+          placeholder="enter your name"
+          name="nombre"
+          id="nombre"
+        />
+        <label for="email" class="label-email">Email</label>
+        <input
+          type="email"
+          required
+          placeholder="example@gmail.com"
+          name="email"
+          id="email"
+        />
+
+        <button>Continue</button>
+      </form>
+
+      <div class="segundo">
+        <h1>Which topics you are interested in?</h1>
+        <div class="pills">
+            <div class="pill" data-value="option1">Software Development</div>
+            <div class="pill pill-select" data-value="option2">User Experience</div>
+            <div class="pill" data-value="option3">Graphic Design</div>
+        </div>
+        <button>Continue</button>
+      </div>
+
+      <div class="resultado">
+        <h1>Summary</h1>
+        <div class="data">
+          <label for="">Name: <span>
+            Raul
+          </span></label>
+          <label for="">Email: <span>
+            example
+          </span></label>
+        </div>
+        <div class="topics">
+          <h2>Topics:</h2>
+          <div class="topic">
+            <label for=""> &#x25CF;  Software Development</label>
+          </div>
+          <div class="topic">
+            <label for=""> &#x25CF;   User Experience</label>
+          </div>
+        </div>
+        <button>Confirm</button>
+      </div>
+    </section>
+    <div class="steps">
+      <label for="" class="step-1">Step 1 of 3</label>
+      <label for="" class="step-2">Step 2 of 3</label>
+      <label for="" class="step-3">Step 3 of 3</label>
+      <div class="bolitas">
+        <div class="step bolita-style" data-step="1"></div>
+        <div class="step bolita-sin-style" data-step="2"></div>
+        <div class="step bolita-sin-style" data-step="3"></div>
+      </div>
+    </div>
+    <div class="color-two">
+      <img src="assets/blur-radial.svg" alt="nubesita morada" />
+    </div>
+  </body>
+</html>
