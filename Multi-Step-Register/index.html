@@ -11,15 +11,15 @@
       <img src="assets/blur-radial.svg" alt="nubesita morada" />
     </div>
     <section class="section-form">
-      <form action="" class="primero">
+      <div class="primero" id="myForm">
         <h1>Register</h1>
         <label for="nombre" class="label-name">Name</label>
         <input
           type="text"
           required
           placeholder="enter your name"
-          name="nombre"
-          id="nombre"
+          name="name"
+          id="name"
         />
         <label for="email" class="label-email">Email</label>
         <input
@@ -30,36 +30,39 @@
           id="email"
         />
 
-        <button>Continue</button>
-      </form>
-
-      <div class="segundo">
-        <h1>Which topics you are interested in?</h1>
-        <div class="pills">
-            <div class="pill" data-value="option1">Software Development</div>
-            <div class="pill pill-select" data-value="option2">User Experience</div>
-            <div class="pill" data-value="option3">Graphic Design</div>
-        </div>
-        <button>Continue</button>
+        <button id="btn-Continue1">Continue</button>
       </div>
 
-      <div class="resultado">
+      <div class="segundo" id="topics">
+        <h1>Which topics you are interested in?</h1>
+        <div class="pills">
+          <div
+            class="pill"
+            id="topic1"
+            onclick="addTopic('Software Development')"
+          >
+            <p>Software Development</p>
+          </div>
+          <div class="pill" id="topic2" onclick="addTopic('User Experience')">
+            <p>User Experience</p>
+          </div>
+          <div class="pill" id="topic3" onclick="addTopic('Graphic Design')">
+            <p>Graphic Design</p>
+          </div>
+        </div>
+        <button id="btn-Continue2">Continue</button>
+      </div>
+
+      <div class="resultado" id="resultado">
         <h1>Summary</h1>
         <div class="data">
-          <label for="">Name: <span>
-            Raul
-          </span></label>
-          <label for="">Email: <span>
-            example
-          </span></label>
+          <label for="">Name: <span id="nameResult"> </span></label>
+          <label for="">Email: <span id="emailResult"> </span></label>
         </div>
         <div class="topics">
           <h2>Topics:</h2>
           <div class="topic">
-            <label for=""> &#x25CF;  Software Development</label>
-          </div>
-          <div class="topic">
-            <label for=""> &#x25CF;   User Experience</label>
+            <label for=""> &#x25CF; </label>
           </div>
         </div>
         <button>Confirm</button>
@@ -70,13 +73,14 @@
       <label for="" class="step-2">Step 2 of 3</label>
       <label for="" class="step-3">Step 3 of 3</label>
       <div class="bolitas">
-        <div class="step bolita-style" data-step="1"></div>
-        <div class="step bolita-sin-style" data-step="2"></div>
-        <div class="step bolita-sin-style" data-step="3"></div>
+        <div class="step bolita-style" data-step="1" id="bolita1"></div>
+        <div class="step bolita-sin-style" data-step="2" id="bolita2"></div>
+        <div class="step bolita-sin-style" data-step="3" id="bolita3"></div>
       </div>
     </div>
     <div class="color-two">
       <img src="assets/blur-radial.svg" alt="nubesita morada" />
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

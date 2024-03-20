@@ -61,7 +61,7 @@ body {
 }
 
 .primero{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -90,6 +90,10 @@ body {
     border: 2px solid var(--text-third);
 }
 
+input{
+    color: var(--text-primary);
+    font-size: 0.8rem;
+}
 
 .primero .label-email{
     margin-top: 15px;
@@ -225,7 +229,7 @@ button{
 /** =======================================================*/
 
 .resultado {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -273,5 +277,5 @@ button{
 
 .resultado button{
     margin-top: 50px;
-    margin-left: 150px;
+    margin-left: 135px;
 }
