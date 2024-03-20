@@ -2,6 +2,10 @@ const primerForm = document.querySelector(".primero");
 const segundoForm = document.querySelector(".segundo");
 const resultado = document.querySelector(".resultado");
 
+const step1 = document.querySelector(".step-1");
+const step2 = document.querySelector(".step-2");
+const step3 = document.querySelector(".step-3");
+
 const btnContinuar1 = document.getElementById("btn-Continue1");
 const btnContinuar2 = document.getElementById("btn-Continue2");
 
@@ -38,6 +42,11 @@ btnContinuar1.addEventListener("click", () => {
   //mostrar los datos de nombre y email en el formulario 3
   document.getElementById("nameResult").innerText = name;
   document.getElementById("emailResult").innerText = email;
+
+ 
+
+  step1.style.display = "none";
+    step2.style.display = "block";
 });
 
 function addTopic(topic) {
@@ -84,4 +93,7 @@ btnContinuar2.addEventListener("click", () => {
   bolita2.classList.add("bolita-style-pass");
   bolita3.classList.remove("bolita-sin-style");
   bolita3.classList.add("bolita-style");
+
+    step2.style.display = "none";
+    step3.style.display = "block";
 });
