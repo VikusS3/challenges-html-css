@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <section>
+      <article class="player">
+        <div >
+            <img src="assets/img/cover-1.jpg" alt="imagen de una chica" class="trak-img"/>
+        </div>
+        <div class="info-song">
+          <h1 id="track-name">Lost in the City Lights</h1>
+          <p id="track-artist">Cosmo Sheldrake</p>
+        </div>
+        <div class="slider-song">
+          <div class="times">
+            <div class="time-current">0:00</div>
+            <div class="time-total">0:00</div>
+          </div>
+
+          <input
+            type="range"
+            name="timeMusic"
+            id="timeMusic"
+            min="1"
+            max="100"
+            value="0"
+            class="song-slider"
+            onchange="seekSlider()"
+          />
+        </div>
+        <div class="buttons">
+          <button class="button-prev" onclick="prevTrack()">
+            <img src="assets/Stop_and_play_fill-1.svg" alt="prev" />
+          </button>
+          <button class="button-play-stop" 
+            onclick="playPauseTrack()"
+          >
+            <img src="assets/Play_fill.svg" alt="prev" />
+          </button>
+          <button class="button-next"
+            onclick="nextTrack()"
+          >
+            <img src="assets/Stop_and_play_fill_reverse.svg" alt="prev" />
+          </button>
+        </div>
+      </article>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
