@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Generador QR</title>
+  </head>
+
+  <body>
+  
+    <header>
+      <img src="assets/logo-qr-generator.svg" alt="Logo de QRCODE" />
+    </header>
+    <div class="img">
+        <img src="assets/bg-illustration.svg" alt="">
+    </div>
+    <section>
+      <div class="content" id="url-generador">
+        <form id="qrForm">
+          <img src="assets/logo-qr-generator.svg" alt="Logo de QRCODE" />
+          <div class="enter-url">
+            <input
+              type="url"
+              placeholder="Enter an url"
+              name="inputUrl"
+              id="idUrl"
+              required
+            />
+            <button>QR Code</button>
+          </div>
+        </form>
+      </div>
+
+      <!--Diseño del QR code-->
+      <div class="qr-content" style="display: none">
+        <div class="qr">
+          <div class="back-qrr">
+            <div id="qrcode" class="code-qr"></div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button onclick="descargarQR()">
+            Download
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-down"
+            >
+              <path d="M0 0h24v24H0z" stroke="none" />
+              <path d="M12 5v14M18 13l-6 6M6 13l6 6" />
+            </svg>
+          </button>
+          <button onclick="shareQR()">
+            Share
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-share"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M8.7 10.7l6.6 -3.4" />
+              <path d="M8.7 13.3l6.6 3.4" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+      let qrUrl = document.getElementById("url-generador");
+      let qrContent = document.querySelector(".qr-content");
+
+      document
+        .getElementById("qrForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let url = document.getElementById("idUrl").value;
+          generateQRCode(url);
+          qrUrl.style.display = "none";
+          qrContent.style.display = "block";
+        });
+
+      function generateQRCode(url) {
+        let qrcode = new QRCode(document.getElementById("qrcode"), {
+          text: url,
+          width: 148,
+          height: 148,
+          colorDark: "#000000",
+          colorLight: "#eaeaea",
+          correctLevel: QRCode.CorrectLevel.H,
+        });
+
+        return qrcode;
+      }
+
+      function descargarQR() {
+        let canvas = document.querySelector("canvas");
+        let image = canvas
+          .toDataURL("qr/png")
+          .replace("qr/png", "qr/octet-stream");
+        let link = document.createElement("a");
+        link.href = image;
+        link.download = "qrcode.png";
+        link.click();
+      }
+
+      function shareQR() {
+        let canvas = document.querySelector("canvas");
+        if (!canvas) {
+          console.error("No se encontró ningún elemento canvas.");
+          return;
+        }
+        let qrImage = canvas.toDataURL("image/png");
+
+        navigator.clipboard
+          .writeText(qrImage)
+          .then(function () {
+            console.log("¡El código QR se ha copiado al portapapeles!");
+            alert("¡El código QR se ha copiado al portapapeles!");
+          })
+          .catch(function (error) {
+            console.error(
+              "Error al copiar el código QR al portapapeles: ",
+              error
+            );
+            alert(
+              "¡Ups! Hubo un error al intentar copiar el código QR al portapapeles."
+            );
+          });
+      }
+    </script>
+  </body>
+</html>
