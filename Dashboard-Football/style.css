@@ -10,7 +10,6 @@ body {
   background-color: #0c0c0c;
   color: #fff;
   overflow-x: hidden;
-
 }
 
 .header {
@@ -27,6 +26,10 @@ body {
   border-bottom: 1px solid #fff;
   animation: slide linear both;
   animation-timeline: scroll(root block);
+}
+
+.menubtn {
+  display: none;
 }
 
 .logo {
@@ -80,7 +83,7 @@ main {
   width: 100%;
   height: 100vh;
   margin: auto;
-  grid-template-columns: repeat(4fr, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -305,7 +308,7 @@ main {
   border-radius: 10px;
   grid-area: 2 / 2 / 8 / 4;
   padding: 25px;
-  
+
   width: 100%;
 }
 
@@ -475,16 +478,15 @@ main {
 
 /*pon el footer abajo del main sin fixed ni nada que este abajo*/
 .footer {
-    background-color: #0c0c0c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 20px;
-    width: 100%;
-    padding-left: 0;
-    grid-area: 9 / 1 / 10 / 5;
-   
+  background-color: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  width: 100%;
+  padding-left: 0;
+  grid-area: 9 / 1 / 10 / 5;
 }
 
 @keyframes slide {
@@ -494,3 +496,159 @@ main {
   }
 }
 
+@keyframes menuOpen {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuClose {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/*media querys*/
+@media screen and (max-width: 768px) {
+  .menubtn {
+    display: block;
+    cursor: pointer;
+  }
+
+  ul {
+    display: inline-flex;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #111111f8;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    animation: menuOpen 0.5s both;
+  }
+
+  .user {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding: 0;
+    top: 100px;
+  }
+
+  .live {
+    width: 100%;
+    border-radius: 0;
+    grid-area: auto;
+  }
+
+  .header-article {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info-match {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .match {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .ligas {
+    width: 100%;
+    border-radius: 0;
+    grid-area: auto;
+  }
+
+  .download {
+    width: 100%;
+    border-radius: 0;
+    grid-area: auto;
+  }
+
+  .download-info {
+    width: 100%;
+  }
+
+  .img-download {
+    display: none;
+  }
+
+  .partidos {
+    width: 100%;
+    border-radius: 0;
+    grid-area: auto;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  .info-liga{
+    width: 80%;
+    margin: auto;
+  }
+
+  .partido{
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  .encuentro{
+    width: 70%;
+    margin: auto;
+  }
+
+  .team{
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .logo-tema{
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .news {
+    width: 100%;
+    border-radius: 0;
+    grid-area: auto;
+  }
+
+  .other-new{
+    width: 100%;
+    margin: auto;
+  }
+
+  .new{
+    max-width: 100%;
+    padding: 0;
+    gap: 40px;
+  }
+
+  .footer {
+    width: 100%;
+    border-radius: 0;
+    grid-area: auto;
+  }
+}
