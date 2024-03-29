@@ -610,12 +610,13 @@ main {
 
   .partido{
     width: 90%;
-    margin: auto;
+    margin: auto 0;
+    padding: 10px;
     margin-top: 15px;
   }
 
   .encuentro{
-    width: 70%;
+    width: 100%;
     margin: auto;
   }
 
@@ -625,8 +626,16 @@ main {
   }
 
   .logo-tema{
-    width: 28px !important;
-    height: 28px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .time{
+    margin-left: 8px;
+  }
+
+  .playing{
+    margin-right: 5px;
   }
 
   .news {
@@ -650,5 +659,58 @@ main {
     width: 100%;
     border-radius: 0;
     grid-area: auto;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .logo img {
+    width: 20px;
+    height: 25px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .header {
+    padding: 10px 10px;
+  }
+
+  .menubtn{
+    padding: 10px;
+    display: inline-flex;
+  }
+
+  .header-article {
+    gap: 10px;
+  }
+
+  .info-match h2 {
+    font-size: 16px;
+  }
+
+  .info-match p {
+    font-size: 14px;
+  }
+
+  .team-1 img,
+  .team-2 img,
+  .team-2-main img,
+  .team-1-main img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .score {
+    font-size: 16px;
+  }
+
+  .country {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 10px;
+    font-size: 16px;
   }
 }
